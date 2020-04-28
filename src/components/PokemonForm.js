@@ -17,12 +17,12 @@ class PokemonForm extends React.Component {
     return (
       <div>
         <h3>Add a Pokemon!</h3>
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={(event) => this.props.handleSubmit(event)}>
           <Form.Group widths="equal">
-            <Form.Input fluid label="Name" placeholder="Name" name="name" />
-            <Form.Input fluid label="hp" placeholder="hp" name="hp" />
-            <Form.Input fluid label="Front Image URL" placeholder="url" name="frontUrl" />
-            <Form.Input fluid label="Back Image URL" placeholder="url" name="backUrl" />
+            <Form.Input fluid label="Name" id="nameInput" placeholder="Name" name="name" />
+            <Form.Input fluid label="hp" id="hpInput" placeholder="hp" name="hp" />
+            <Form.Input fluid label="Front Image URL" id="frontUrlInput" placeholder="url" name="frontUrl" />
+            <Form.Input fluid label="Back Image URL" id="backUrlInput" placeholder="url" name="backUrl" />
           </Form.Group>
           <Form.Button>Submit</Form.Button>
         </Form>
